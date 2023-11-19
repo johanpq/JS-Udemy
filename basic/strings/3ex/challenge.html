@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Putting the first letter to upper case</title>
+</head>
+<body>
+    
+</body>
+<script>
+    var nome = prompt("What's your name? ");
+
+    var nome1 = nome.slice(0,1).toUpperCase();
+    //nome = nome.slice(1,50)
+
+    /* Em vez de 50 que é um numero limitado e eu não sei quantos caracteres o usuário pode digitar, eu posso trocar esse 50 por nome.length */
+
+    nome = nome.slice(1,nome.length).toLowerCase()
+
+    // Colocando o lowercase aqui, porque se o usuário digitar o resto em maiusculo, ele coloca em minusculo.
+
+    alert("Hello, " + nome1 + nome);
+</script>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculating the human age of a Dog</title>
+</head>
+<body>
+    
+</body>
+<script>
+    var NameOfDogPrompt = prompt("What's your dog's name? ");
+    var AgeOfDogPrompt = prompt("How old is your dog? ");
+
+    var FirstLetterDogName = NameOfDogPrompt.slice(0,1).toUpperCase();
+    var RestOfLetterDogName = NameOfDogPrompt.slice(1,NameOfDogPrompt.length).toLowerCase();
+
+    var NameOfDog = FirstLetterDogName + RestOfLetterDogName;
+
+    var AgeOfDog = parseInt(AgeOfDogPrompt);
+
+    var HumanAge = (AgeOfDog - 2) * 4 + 21;
+
+    alert(`Your dog is ${NameOfDog}, and is ${HumanAge} years old`);
+
+    var x = 3;
+    var y = x++;
+    y += 1;
+    alert(`x = ${x}, y = ${y}`);
+
+</script>
+</html>

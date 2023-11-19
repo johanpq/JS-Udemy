@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+</head>
+<body>
+    
+</body>
+<script>
+    var PriceOfMilk = prompt("What's the price of the milk? ");
+    var AmountOfMilk = prompt("How many bottles of milk would you like to buy? ");
+
+    function ValueOfMilk(PriceOfMilk, AmountOfMilk) {
+        let PriceMilk = Number(PriceOfMilk);
+        let AmountMilk = parseInt(AmountOfMilk);
+
+        if(AmountMilk != 0) {
+
+            const Total = Math.floor(AmountMilk * PriceMilk);
+            return Total;
+        } else {
+            return 1;
+        }
+    }
+
+    // A função Math.floor() arredonda valores quebrados, em vez de 3,44444444, ele coloca 3.
+
+    var ResultOfTheShop = ValueOfMilk(PriceOfMilk, AmountOfMilk);   // tem que passar os parâmetros para a variável conseguir receber o que está retornando dentro da função
+
+    if(ResultOfTheShop === 1) {
+        alert("You can't buy 0 bottles, try it again!")
+    } else {
+        alert(`You're buying ${AmountOfMilk} bottle(s) and the total to pay is ${ResultOfTheShop} `);
+    }
+
+    console.log(ResultOfTheShop);
+
+
+</script>
+</html>
