@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interview Question FizzBuzz</title>
+</head>
+<body>
+    
+</body>
+<script>
+    var Num = [];
+    var count = 1;
+
+    function FizzBuzz() {
+
+        if(count % 3 === 0 && count % 5 == 0) {
+            Num.push("FizzBuzz");
+        } else if (count % 3 === 0) {
+            Num.push("Fizz");
+        } else if(count % 5 === 0) {
+            Num.push("Buzz");
+        } else {
+            Num.push(count);
+        }
+
+        count++; 
+
+        console.log(Num);
+    }
+ 
+    FizzBuzz();  // Cada vez que chamar a função, vai aumentar +1 ao vetor por causa do incremento
+</script>
+</html>
