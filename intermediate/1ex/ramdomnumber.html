@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ramdom Number</title>
+</head>
+<body>
+    
+</body>
+<script>
+    var n = Math.random();
+    console.log(n);
+
+    // O método Math.random() gera números aleatorios de 16 digitos, de 0 até 999999999999.
+    // Se eu quiser número entre 0 e 5 então eu multiplico por 5 para ele ficar entre 0 e 4, se eu quiser entre 0 e 10 eu multiplico por 11, e posso usar o método Math.floor() para pegar o valor inteiro(sem ser o quebrado)
+
+    // Ou eu posso fazer n = (n * 6) + 1 . Para que ele pegue de 0 a 6, em vez de 0 a 5.
+
+    n = n * 6;
+    n = Math.floor(n);
+    console.log(n);
+</script>
+</html>
