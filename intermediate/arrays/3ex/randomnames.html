@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Names</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let names = ["Angela", "Johan", "JP", "Jose", "Adriana"];
+
+    function payfood(names) {
+        var size = names.length;
+
+        var n = Math.random();
+        n = (n * size) + 1;
+        n = Math.floor(n);
+
+        return("Who's gonna pay is " + names[n]);
+    }
+
+    var PayTheFood = payfood(names);
+    console.log(PayTheFood);
+
+
+</script>
+</html>
