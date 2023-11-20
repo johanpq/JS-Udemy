@@ -11,11 +11,13 @@
 <script>
     function bmiCalculator(weight, height) {
     var cal = weight / (Math.pow(height, 2));
-    return cal;
+    return Math.round(cal);
     }
 
     var bmi = bmiCalculator(65, 1.8); 
+    console.log(bmi);
 
     // O método Math.pow() é para elevar ao quadrado ou a qualquer outro expoente
+    // Como iria retornar um valor muito quebrado, o método Math.round() arredonda o valor. Ex.: 20,4343434334, com o método fica: 20
 </script>
 </html>
