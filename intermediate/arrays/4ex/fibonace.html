@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Fibonace exercise</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function fibonacciGenerator (n) {
+//Do NOT change any of the code above 👆
+    
+    //Write your code here:
+    
+    var output = [];
+    
+    for(var i = 0; i < n; i++) {
+        if(i === 0) {
+            output = [0];
+        } else if(i === 1) {
+            output.push(1);
+        } else if(i === 2) {
+            output.push(1);
+        } else {
+            //output = output[output.length - 1] + output[output.length];
+            output.push(output[output.length - 1] + output[output.length - 2]);
+        }
+    }
+
+    console.log(output);
+    return output;
+    //Return an array of fibonacci numbers starting from 0.
+    
+//Do NOT change any of the code below 👇
+}
+
+fibonacciGenerator(10);
+
+// É para somar o ultimo indice valor do vetor com o penultimo, por isso é output.length - 1 (para pegar o ultimo indice) e ( - 2 para pegar o penultimo)
+
+// Porque contando do 0, se n = 10 então se usar a propridade output.length vai ter ao total 10 valores
+// OBS.:  se você contar no dedo(0 = 1, 1 = 2...) quando chegar no 10 vai ser 9 ao total, ou seja ele começa contando 1 do 0. Por isso output - 1 é o ultimo elemento e -2 o penultimo.
+
+</script>
+</html>
