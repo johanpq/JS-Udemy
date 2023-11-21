@@ -24,19 +24,18 @@
         } else if(i === 2) {
             output.push(1);
         } else {
-            //output = output[output.length - 1] + output[output.length];
             output.push(output[output.length - 1] + output[output.length - 2]);
         }
     }
 
-    console.log(output);
     return output;
     //Return an array of fibonacci numbers starting from 0.
     
 //Do NOT change any of the code below 👇
 }
 
-fibonacciGenerator(10);
+output = fibonacciGenerator(10);
+console.log(output);
 
 // É para somar o ultimo indice valor do vetor com o penultimo, por isso é output.length - 1 (para pegar o ultimo indice) e ( - 2 para pegar o penultimo)
 
