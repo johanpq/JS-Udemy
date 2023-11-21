@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning about attributes</title>
+</head>
+<body>
+    <header>
+        <h1>Hello World</h1>
+    </header>
+    <main>
+        <ul>
+            <li><a href="#">Google</a></li>
+            <li>Microsoft</li>
+            <li>Twitter</li>
+        </ul>
+    </main>
+</body>
+<script>
+    // tudo que é colorido é atributo, class, href, source e etc...
+
+    //var Google = document.querySelector('ul li').getAttribute('href');
+
+    // getAttribute() pega o atributo do seletor
+    // setAttribute() recebe dois parâmetros, 1- o que você quer muda, 2- O que vai ser mudado
+
+    var Google = document.querySelector('ul li').setAttribute('href', 'https://www.google.com.br')
+    
+</script>
+</html>
