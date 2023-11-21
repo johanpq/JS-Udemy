@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usando classlist</title>
+    <style>
+        .second-li {
+            color: blue;
+        }
+        .second-li-js {
+            visibility: hidden;
+        }
+        .titleOfHeader {
+            font-size: 10em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Hello World</h1>
+    </header>
+    </head>
+    <main>
+        <ul>
+            <li>Google</li>
+            <li class="second-li">Microsoft</li>
+            <li>Twitter</li>
+        </ul>
+    </main>
+</body>
+<script>
+    // É comum usar o classlist para criar diretamente do js uma nova classe para o JS manipular, e não a mesma class que o css usa. 
+
+    var Microsofot = document.querySelectorAll('ul li')[1].classList.add("second-li-js");
+
+    // Adicionei uma nova classe, e fiz um seletor no css onde eu vou manipular com js
+    // Posso tanto adicionar, como remove var Microsofot = document.querySelectorAll('ul li')[1].classList.remove("second-li-js");
+    // e existe a propriedade toggle que é: se o seletor tive aplicado, remova-o, senão tiver aplicado, aplique.
+    // var Microsofot = document.querySelectorAll('ul li')[1].classList.toggle("second-li-js");
+
+    var h1 = document.querySelector('header h1').classList.add('titleOfHeader');
+    
+</script>
+</html>
