@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Dicee</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Lobster" rel="stylesheet">
+
+  </head>
+  <body>
+
+    <div class="container">
+      <h1>Refresh Me</h1>
+
+      <div class="dice">
+        <p>Player 1</p>
+        <img class="img1" src="">
+      </div>
+
+      <div class="dice">
+        <p>Player 2</p>
+        <img class="img2" src="">
+      </div>
+
+    </div>
+
+    <button>Play</button>
+
+  </body>
+  <script>
+    var Player1 = Math.random();
+    var Player2 = Math.random();
+    // multiplicando para pegar numeros de 0 a 6 e pegar somente o valor inteiro, sem ser o quebrado
+    Player1 = Math.floor((Player1 * 6) + 1);
+    Player2 = Math.floor((Player2 * 6) + 1);
+
+    //console.log("Player1 = " + Player1 + " Player2 = " + Player2);
+    //console.log(typeof(Player1));
+
+    var h1 = document.querySelector('div h1');
+
+    var button = document.querySelector('button').addEventListener('click', play);
+
+    function play() {
+      
+      if(Player1 === 1) {
+          let dice1 = document.querySelectorAll('div img')[0].setAttribute('src', 'images/dice1.png');
+      } else if(Player1 === 2) {
+          let dice2 = document.querySelectorAll('div img')[0].setAttribute('src', 'images/dice2.png')
+      } else if(Player1 === 3) {
+          let dice3 = document.querySelectorAll('div img')[0].setAttribute('src', 'images/dice3.png');
+      } else if(Player1 === 4) {
+          let dice4 = document.querySelectorAll('div img')[0].setAttribute('src', 'images/dice4.png');
+      } else if(Player1 === 5) {
+          let dice5 = document.querySelectorAll('div img')[0].setAttribute('src', 'images/dice5.png');
+      } else if(Player1 === 6)  {
+          let dice6 = document.querySelectorAll('div img')[0].setAttribute('src', 'images/dice6.png');
+      }
+
+      if(Player2 === 1) {
+          let dice1 = document.querySelectorAll('div img')[1].setAttribute('src', 'images/dice1.png');
+      } else if(Player2 === 2) {
+          let dice2 = document.querySelectorAll('div img')[1].setAttribute('src', 'images/dice2.png')
+      }   else if(Player2 === 3) {
+          let dice3 = document.querySelectorAll('div img')[1].setAttribute('src', 'images/dice3.png');
+      } else if(Player2 === 4) {
+          let dice4 = document.querySelectorAll('div img')[1].setAttribute('src', 'images/dice4.png');
+      } else if(Player2 === 5) {
+          let dice5 = document.querySelectorAll('div img')[1].setAttribute('src', 'images/dice5.png');
+      } else if(Player2 === 6)  {
+         let dice6 = document.querySelectorAll('div img')[1].setAttribute('src', 'images/dice6.png');
+      }
+      
+      if(Player1 > Player2) {
+        h1.innerHTML = "Player 1 won!";
+      } else if(Player1 === Player2) {
+        h1.innerHTML = "Draw!";
+      } else {
+        h1.innerHTML = "Player 2 won"
+      }
+    }
+
+  </script>
+
+  <footer>
+    www 🎲 App Brewery 🎲 com
+  </footer>
+</html>
