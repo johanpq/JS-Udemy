@@ -29,14 +29,32 @@
   </body>
   <script>
 
-    //console.log("Player1 = " + Player1 + " Player2 = " + Player2);
-    //console.log(typeof(Player1));
-
     var h1 = document.querySelector('div h1');
 
     var button = document.querySelector('button').addEventListener('click', play);
 
     function play() {
+      var Player1 = Math.floor(Math.random() * 6) + 1; // se fosse só * 6, seria de 0 - 5, como tem + 1, é de 1 a 6
+      var Player2 = Math.floor(Math.random() * 6) + 1;
+
+      var RandomNumberPlayer1 = "dice" + Player1 + ".png";
+      var RandomNumberPlayer2 = "dice" + Player2 + ".png";
+
+      var ImgPlayer1 = document.querySelectorAll('img')[0].setAttribute('src', "images/" + RandomNumberPlayer1);
+      var ImgPlayer2 = document.querySelectorAll('img')[1].setAttribute('src', "images/" + RandomNumberPlayer2);
+
+      if(Player1 > Player2) {
+        h1.innerHTML = "Player 1 won!";
+      } else if(Player1 === Player2) {
+        h1.innerHTML = "Draw!";
+      } else {
+        h1.innerHTML = "Player 2 won!";
+      }
+    }
+
+    // OUTRA MANEIRA
+
+    /* function play() {
       var Player1 = Math.random();
       var Player2 = Math.random();
       // multiplicando para pegar numeros de 0 a 6 e pegar somente o valor inteiro, sem ser o quebrado
@@ -80,7 +98,7 @@
       } else {
         h1.innerHTML = "Player 2 won"
       }
-    }
+    } */
 
   </script>
 
