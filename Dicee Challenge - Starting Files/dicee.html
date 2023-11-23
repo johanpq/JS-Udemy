@@ -28,11 +28,6 @@
 
   </body>
   <script>
-    var Player1 = Math.random();
-    var Player2 = Math.random();
-    // multiplicando para pegar numeros de 0 a 6 e pegar somente o valor inteiro, sem ser o quebrado
-    Player1 = Math.floor((Player1 * 6) + 1);
-    Player2 = Math.floor((Player2 * 6) + 1);
 
     //console.log("Player1 = " + Player1 + " Player2 = " + Player2);
     //console.log(typeof(Player1));
@@ -42,6 +37,11 @@
     var button = document.querySelector('button').addEventListener('click', play);
 
     function play() {
+      var Player1 = Math.random();
+      var Player2 = Math.random();
+      // multiplicando para pegar numeros de 0 a 6 e pegar somente o valor inteiro, sem ser o quebrado
+      Player1 = Math.floor((Player1 * 6) + 1);
+      Player2 = Math.floor((Player2 * 6) + 1);
       
       if(Player1 === 1) {
           let dice1 = document.querySelectorAll('div img')[0].setAttribute('src', 'images/dice1.png');
