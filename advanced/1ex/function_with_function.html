@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Função como argumento</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function somar(n1, n2) {
+        return n1 + n2;
+    }
+
+    function subtrair(n1, n2) {
+        return n1 - n2;
+    }
+
+    function multiplicar(n1, n2) {
+        return n1 * n2;
+    }
+
+    function dividir(n1, n2) {
+        return n1 / n2;
+    }
+
+    // somar(2,3);
+    // multiplicar(n1, n2);
+    // Em vez de fazer isso, eu posso simplesmente criar uma função como parâmetro dentro de uma função generica que vai retornar os outros parâmetros da função e então passar o nome da função que eu quero que faça o calculo. EX.:
+
+    function calcular(n1, n2, operador) {
+        return operador(n1, n2);  // Criei uma função como um parâmetro (operador) que eu criei, e passei n1 e n2 como parâmetros para essa função
+    }
+
+    var rec = calcular(2, 5, multiplicar);   // rec recebe o retorno. A função calcular recebe 2 para n1 e 5 para n2, e eu chamo a função multiplicar, para dizer que eu quero multiplicar.
+    alert(rec);
+
+
+</script>
+</html>
