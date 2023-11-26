@@ -11,7 +11,7 @@
 <script>
     // Objeto é quase como se fosse uma struct
 
-    var housekepper1 = {
+   /*  var housekepper1 = {
         name: "Angelina",
         age: 29,
         skilled: true,
@@ -19,7 +19,7 @@
         lazy: false
     }
 
-    alert("Your name is " + housekepper1.name);
+    alert("Your name is " + housekepper1.name); */
 
     // Caso precisemos criar muitos, então podemos criar uma função e usar o this para fazer isso. Esse tipo de função é chamado de construction function
 
@@ -28,8 +28,16 @@
     /* var Boy1 = new People("Timmy", 19, true, ["French", "English"]); */
 
     function HouseKepper(name, age, skilled, languages, lazy) {
-        
+        this.name = name;
+        this.age = age;
+        this.skilled = skilled;
+        this.languages = languages;
+        this.lazy = lazy;
     }
+
+    var housekepper1 = new HouseKepper("Timmy", 20, true, ["English", "Japanese"], false);
+
+    alert(housekepper1.languages);
 
 </script>
 </html>
