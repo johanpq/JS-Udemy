@@ -33,6 +33,8 @@ for(let i = 0; i < document.querySelectorAll('.drum').length; i++) {
                 break
         }
 
+        // Pega os elementos que forem clicados. Switch pode fazer isso.
+
     });
 } 
 
