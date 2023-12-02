@@ -30,7 +30,7 @@ for(let i = 0; i < document.querySelectorAll('.drum').length; i++) {
                 var audio = new Audio('sounds/kick-bass.mp3').play();
                 break
             default:
-                break
+                console.log(buttonclick); //caso de algo errado
         }
 
         // Pega os elementos que forem clicados. Switch pode fazer isso.
