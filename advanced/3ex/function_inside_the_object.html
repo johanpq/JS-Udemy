@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function inside the object</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // Criando uma função anonima dentro de uma função construtora.
+
+    function HouseKepper(name, age, work) {
+        this.name = name;
+        this.age = age;
+        this.work = function() {
+            alert("It's cleaning!");
+        }
+    }
+
+    var housekepper1 = new HouseKepper("Pj", 20, ); // Criando um novo objeto
+
+    housekepper1.work(); // Chamando a função
+</script>
+</html>
