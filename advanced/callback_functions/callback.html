@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CallBack Functions</title>
+</head>
+<body>
+    <h1 id="h1"></h1>
+</body>
+<script>
+    var h1 = document.getElementById('h1');
+
+    //eu crio uma função que vai retornar o valor para outra função (que vai ser a função callback)
+    function Soma(Numero, SomaEPrintar) {
+        const soma = Numero + 5;
+        SomaEPrintar(soma); // Função CallBack
+    }
+    //Função CallBack
+    function PrintarSoma(soma) {
+        h1.innerHTML = "Soma é " + soma;
+    }
+
+    Soma(5, PrintarSoma);
+
+    //eu crio uma função que vou retornar o valor para outra função (que vai ser a função callback) e depois chamo essa função passando a função callback que vai receber o valor já  e vai printar na tela.
+
+
+    //Como mencionado anteriormente, os callbacks são funções que são passadas como argumentos para outras funções e são executadas quando uma operação assíncrona é concluída. Isso permite que o código continue executando outras tarefas enquanto espera a conclusão da operação assíncrona.
+
+    //Funções assíncronas em JavaScript são funções que não bloqueiam a execução do código enquanto estão sendo executadas. Em vez de esperar que uma operação seja concluída antes de continuar para a próxima, funções assíncronas permitem que outras tarefas sejam realizadas enquanto a operação está em andamento. Isso é especialmente útil quando se lida com operações que podem levar tempo, como leitura/gravação de arquivos, chamadas de rede ou execução de animações.
+
+    // Funções CallBacks é um tipo de função de ordem superior
+
+</script>
+</html>
