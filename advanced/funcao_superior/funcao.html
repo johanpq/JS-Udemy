@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+/* Funções de ordem superior (Higher-Order Functions, em inglês) são funções que aceitam outras funções como argumentos e/ou retornam funções como resultados. Em JavaScript, as funções são consideradas cidadãs de primeira classe, o que significa que elas podem ser tratadas como qualquer outro valor. Isso permite que você use funções de ordem superior para criar código mais modular, flexível e reutilizável. */
+
+//Existem dois principais tipos de funções de ordem superior: funções que aceitam funções como argumentos(callbacks) e funções que retornam funções.
+
+// Função de ordem superior que retorna uma função
+function multiplicador(fator) {
+    // Retorna uma função que multiplica um número pelo fator
+    return function (numero) {
+        return numero * fator;
+    };
+}
+
+// Criando uma função de multiplicação por 2
+const dobrador = multiplicador(5);
+
+// Usando a função retornada
+const resultadoDobrado = dobrador(10); // Resultado: 14
+
+alert("Resultado é: " + resultadoDobrado);
+
+</script>
+</html>
