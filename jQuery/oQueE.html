@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O que é jQuery</title>
+</head>
+<body>
+    <h1 id="teste" style="text-align: center;">Teste</h1>
+    <button>Teste1</button>
+    <button>Teste2</button>
+    <button>Teste3</button>
+    <button>Teste4</button>
+</body>
+<script>
+    for(let i = 0; i < document.querySelectorAll('button').length; i++) {
+        document.querySelectorAll('button')[i].addEventListener('click', function() {
+            document.querySelectorAll('button')[i].style.color = "blue";
+
+            setTimeout(function() {
+                document.querySelectorAll('button')[i].style.color = "black";
+            }, 100);
+        })
+    }
+
+    /* Em vez de fazer isso tudo para pegar todos os botões, fazer um evento listener e uma função para sempre que clicar trocar a cor. Com a biblioteca jQuery eu posso reduzir essas linhas de código usando: 
+    
+                        $("button").click(function() {
+                            $("h1").css("color", "red");
+                        }) 
+    */
+
+
+   /* 
+                        document.querySelector('h1') é a mesma coisa que: $('h1')
+   */
+</script>
+</html>
